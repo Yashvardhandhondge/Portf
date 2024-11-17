@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide default scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Ticket Styles */
+  .ticket {
+    height: 400px;
+    min-width: 200px;
+    margin: 20px;
+    background-color: #dadada;
+    border-radius: 10px;
+    transition: transform 150ms ease-in-out;
+    position: relative;
+  }
+  .ticket::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: white;
+    top: 15px;
+    left: 15px;
+  }
+  .ticket:nth-of-type(3n) {
+    background-color: rgb(150, 194, 231);
+  }
+  .ticket:nth-of-type(3n + 1) {
+    background-color: rgb(194, 231, 150);
+  }
+  .ticket:nth-of-type(3n + 2) {
+    background-color: rgb(145, 52, 64);
+  }
+  
+  .moving-left {
+    transform: rotateZ(7deg) translateX(-10px);
+  }
+  .moving-right {
+    transform: rotateZ(-7deg) translateX(10px);
+  }
+  
+  /* Button Styles */
+  .btn-action {
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #777;
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-action:hover {
+    background-color: #ddd;
+  }
+  
